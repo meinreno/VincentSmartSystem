@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block corpoBase %}
+<div class="container-fluid col-sm-4"><button id="produtos" class="btn btn-primary btn-block">Produtos</button></div>
+<div class="container-fluid col-sm-4"><button id="fornecedores" class="btn btn-primary btn-block">Fornecedores</button></div>
+<div class="container-fluid col-sm-4"><button id="entradaNF" class="btn btn-primary btn-block">Entrada de Produtos</button></div>
+
+
+<div id="corpoProdutos"></div>
+
+
+{% endblock %}
+
+{% block scripts%}
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#corpoProdutos").load('/produtos/buscarprodutos')
+		zerarCarregamento();
+
+});
+</script>
+{% endblock %}

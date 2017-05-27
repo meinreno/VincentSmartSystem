@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block corpoBase %}
+<div class="container-fluid col-sm-12"><center><h1>Selecione o Modulo</h1></center></div>
+<div class=" container-fluid  col-sm-4 ">
+	<div class="panel panel-primary">
+	  <div class="panel-heading"><center><a type="button" href="/produtos" class="btn btn-primary  btn-block">
+			<center><h2>Produtos</h2></center>
+		</a></center></div>
+	  <div class="panel-body">
+	    <ul class="list-group">
+		  <li class="list-group-item">Informações, Cadastro, Alteração de Preços e Etc</li>
+		  <li class="list-group-item">Cadastro Fornecedores</li>
+		  <li class="list-group-item">Entrada de Nota Fiscal</li>
+		</ul>
+	  </div>
+	</div>
+</div>
+
+<div class=" container-fluid  col-sm-4 ">
+	<div class="panel panel-primary">
+	  <div class="panel-heading"><center><a type="button" href="/Financeiro" class="btn btn-primary  btn-block">
+			<center><h2>Financeiro</h2></center>
+		</a></center></div>
+	  <div class="panel-body">
+	    <ul class="list-group">
+		  <li class="list-group-item">Razão Social: Loja do Mariazinha Ltda.</li>
+		  <li class="list-group-item">CNPJ: 22.222.222/2222-22</li>
+		  <li class="list-group-item">IE: 222.222.222.222</li>
+		  <li class="list-group-item">Tel.: (11)2222-2222</li>
+		</ul>
+	  </div>
+	</div>
+</div>
+<div class=" container-fluid  col-sm-4 ">
+	<div class="panel panel-primary">
+	  <div class="panel-heading"><center><a type="button" href="/Checkout" class="btn btn-primary  btn-block">
+			<center><h2>Checkout</h2></center>
+		</a></center></div>
+	  <div class="panel-body">
+	    <ul class="list-group">
+		  <li class="list-group-item">Razão Social: Loja do Joaozinho Ltda.</li>
+		  <li class="list-group-item">CNPJ: 11.111.111/1111-11</li>
+		  <li class="list-group-item">IE: 111.111.111.111</li>
+		  <li class="list-group-item">Tel.: (11)1111-1111</li>
+		</ul>
+	  </div>
+	</div>
+</div>
+
+{% endblock %}

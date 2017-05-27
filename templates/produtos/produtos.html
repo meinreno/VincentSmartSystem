@@ -1,0 +1,206 @@
+<div class="container-fluid col-sm-12"><center><h1>Busca de Produtos</h1></center></div>
+<div class="container-fluid">
+	
+		<div class="form-group">
+			<div class="col-sm-12">
+		  		<input type="text" name="loginEmail" class="form-control" id="loginEmail" placeholder="Insira o nome do Produto ou Codigo de Barras" required>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-sm-6">
+			  <button id="buscarProduto" class="btn btn-primary btn-block">Buscar</button>
+			</div>
+			<div class="col-sm-6">
+			  <button id="cadastrarProduto" class="btn btn-primary btn-block">Cadastrar Produtos</button>
+			</div>
+		</div>
+        <br>
+       
+		
+</div>
+<br>
+ <div class="container-fluid">
+    <button  class="produto btn btn-default btn-block" data-custo="45.54"><div class="col-sm-1" style="text-align:left">ID: 24</div><div class="col-sm-4" style="text-align:left">Descrição Gondola: deso rexonna 123gssssssdeso rexonna 123</div><div class="col-sm-2" style="text-align:left">Custo: 23,56</div><div class="col-sm-2" style="text-align:left">Venda: 52,56</div><div class="col-sm-2" style="text-align:left">Estoque: 4654,78</div></button>
+    <button class="btn btn-default btn-block">Produtos</button>
+ </div>
+
+<!--Modal de Exibir, Editar e Cadastrar Produtos-->
+ <div class="modal fade bs-example-modal-sm" id="modal_Prod" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <center><h1 class="modal-title titulo_msg" id="tituloModalProd"></h1></center>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" id="dados_Produto">
+            <div class="container-fluid">
+                <div class="form-group">
+                    <label for="campoDescCompleta" class="col-sm-2 control-label">Descrição Completa</label>
+                    <div class="col-sm-8 divDadosProdutos" id="campoDescCompleta">
+                     </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="CampoDescGond" class="col-sm-2 control-label">Descrição de Gondola</label>
+                    <div class="col-sm-8 divDadosProdutos" id="CampoDescGond">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="CampoDescRes" class="col-sm-2 control-label">Descrição Resumida</label>
+                    <div class="col-sm-8 divDadosProdutos" id="CampoDescRes">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="CamṕoProdBloq" class="col-sm-2 control-label">Produto Bloqueado</label>
+                    <div class="col-sm-1 divDadosProdutos" id="CamṕoProdBloq">
+                    </div>
+
+                    <label for="CampoTipEmbal" class="col-sm-2 control-label">Tipo Embalagem</label>
+                    <div class="col-sm-1 divDadosProdutos" id="CampoTipEmbal">
+                    </div>
+
+                    <label for="CampoAlcool" class="col-sm-1 control-label">Alcoolico</label>
+                    <div class="col-sm-1 divDadosProdutos" id="CampoAlcool">
+                    </div>
+
+                    <label for="CampoBal" class="col-sm-1 control-label">Balança</label>
+                    <div class="col-sm-1 divDadosProdutos" id="CampoBal">
+                        
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="CampoDepart" class="col-sm-2 control-label">Departamento</label>
+                    <div class="col-sm-4 divDadosProdutos" id="CampoDepart">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="CampoSecao" class="col-sm-2 control-label">Seção</label>
+                    <div class="col-sm-4 divDadosProdutos" id="CampoSecao">
+                        
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="CampoGrupo" class="col-sm-2 control-label">Grupo</label>
+                    <div class="col-sm-4 divDadosProdutos" id="CampoGrupo">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="CampoSubg" class="col-sm-2 control-label">Subgrupo</label>
+                    <div class="col-sm-4 divDadosProdutos" id="CampoSubg">
+                    </div>
+                </div>
+                 
+                <div class="form-group">
+                    <label for="CampoCusto" class="col-sm-2 control-label">Custo</label>
+                    <div class="col-sm-2 divDadosProdutos" id="CampoCusto">
+                    </div>
+
+                    <label for="CampoPrecVend" class="col-sm-1 control-label">Preço Venda</label>
+                    <div class="col-sm-2 divDadosProdutos" id="CampoPrecVend">
+                    </div>
+
+                    <label for="CampoMargLuc" class="col-sm-1 control-label">Margem Lucro</label>
+                    <div class="col-sm-2 divDadosProdutos" id="CampoMargLuc">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="CampoEAN" class="col-sm-2 control-label">Codigo de  Barras(EAN)</label>
+                    <div class="col-sm-2 divDadosProdutos" id="CampoEAN">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="CampoNCM" class="col-sm-2 control-label">Nomenclatura Comum do Mercosul(NCM)</label>
+                    <div class="col-sm-2 divDadosProdutos" id="CampoNCM">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="CampoQuant" class="col-sm-2 control-label">Quantidade</label>
+                    <div class="col-sm-2 divDadosProdutos" id="CampoQuant">
+                    </div>
+                </div>
+
+                <center><h3>Informações Fiscais</h3></center>
+
+                <div class="form-group">
+                    <label for="CampoOrigMerc" class="col-sm-2 control-label">Origem da Mercadoria</label>
+                    <div class="col-sm-3 divDadosProdutos" id="CampoOrigMerc">
+                    </div>
+
+                    <label for="CampoSitTrib" class="col-sm-2 control-label">Situação Tributária</label>
+                    <div class="col-sm-3 divDadosProdutos" id="CampoSitTrib">
+                    </div>
+                </div>            
+
+                <div class="form-group">
+                    <label for="CampoAliICMS" class="col-sm-2 control-label">Aliquota ICMS(%)</label>
+                    <div class="col-sm-3 divDadosProdutos" id="CampoAliICMS">
+                    </div>
+
+                    <label for="CampoReducao" class="col-sm-2 control-label">Redução(%)</label>
+                    <div class="col-sm-3 divDadosProdutos" id="CampoReducao">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="CampoModBcICMS" class="col-sm-1 control-label">Modelo BC ICMS</label>
+                    <div class="col-sm-3 divDadosProdutos" id="CampoModBcICMS">
+                    </div>
+
+                    <label for="CampoBcIcmsSt" class="col-sm-1 control-label">Modelo BC ICMS ST</label>
+                    <div class="col-sm-3 divDadosProdutos" id="CampoBcIcmsSt">
+                    </div>
+
+                    <label for="CampoCstIpi" class="col-sm-1 control-label">CST IPI</label>
+                    <div class="col-sm-3 divDadosProdutos" id="CampoCstIpi">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="CampoIpi" class="col-sm-1 control-label">IPI(%)</label>
+                    <div class="col-sm-3 divDadosProdutos" id="CampoIpi">
+                     </div>
+
+                    <label for="CampoPis" class="col-sm-1 control-label">PIS(%)</label>
+                    <div class="col-sm-3 divDadosProdutos" id="CampoPis">
+                    </div>
+
+                    <label for="CampoCstCofins" class="col-sm-1 control-label">CST COFINS</label>
+                    <div class="col-sm-3 divDadosProdutos" id="CampoCstCofins">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="CampoCofins" class="col-sm-1 control-label">COFINS(%)</label>
+                    <div class="col-sm-3 divDadosProdutos" id="CampoCofins">
+                    </div>
+
+                    <label for="CampoMva" class="col-sm-1 control-label">MVA(%)</label>
+                    <div class="col-sm-3 divDadosProdutos" id="CampoMva">
+                    </div>
+
+                    <label for="CampoIva" class="col-sm-1 control-label">IVA(%)</label>
+                    <div class="col-sm-3 divDadosProdutos" id="CampoIva">
+                    </div>
+                </div>
+               
+            </div>
+         </form>
+      </div>
+      <div  id="botoesProdutos" class="modal-footer btnDadosProdutos">
+     </div>
+    </div>
+  </div>
+</div><!--modal-->
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta http-equiv="Content-Language" content="pt-br">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vincent SMART System</title>
+
+    <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+
+  </head>
+  <body>
+
+  	<nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a style="color: black; font-weight: bold;" class="navbar-brand" href="/home">Vincent SMART System</a>
+          {% block navbarheader %}
+          {% endblock %}
+          {% block navbarcollapse%}
+          {% endblock %}
+        </div>
+      </div>
+</nav>
+    <script language="javascript" type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
+    <script language="javascript" type="text/javascript" src="{{ url_for('static', filename='produtos.js') }}"></script>
+    <script language="javascript" type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js' ) }}"></script>
+    {% block scripts%}
+    {% endblock %}
+    {% block corpoBase %}
+    {% endblock %}
+      </body>
+</html>
