@@ -4,12 +4,12 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:1234@localhost/vincent'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:1234@localhost/royal210_vincentProject'
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 db = SQLAlchemy(app)
 
 class fornecedores(db.Model):
-	id = db.Column(db.Integer, primary_key=True)
+	id = db.Column(db.Integer, prymary_key=True)
 	nome_fantasia = db.Column(db.String(255))
 	razao_social = db.Column(db.String(255))
 	cnpj = db.Column(db.String(14))
@@ -23,7 +23,7 @@ class fornecedores(db.Model):
 	vendedor = db.Column(db.String(255))
 	telefone_vendedor = db.Column(db.String(20))
 	email_vendedor = db.Column(db.String(255))
-	endereco_web = db.Column(db.String(255))
+	emdereco_web = db.Column(db.String(255))
 	telefone_empresa = db.Column(db.String(20))
 	email_empresa = db.Column(db.String(255))
 	
@@ -45,6 +45,6 @@ class fornecedores(db.Model):
 		self.vendedor = vendedor
 		self.telefone_vendedor = telefone_vendedor
 		self.email_vendedor = email_vendedor
-		self.endereco_web = endereco_web
+		self.emdereco_web = emdereco_web
 		self.telefone_empresa = telefone_empresa
 		self.email_empresa = email_empresa

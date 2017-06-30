@@ -34,9 +34,9 @@ $(document).on("click", ".produto", function(){
 	
 	$("#tituloModalProd").html("Dados Produto");
 
-	$("#campoDescCompleta").html('Couve Boa Un');
+	$("#campoDescCompleta").html('<p class="form-control-static">email@example.com</p>');
 	
-	$("#CampoDescGond").html('Couve un');
+	$("#CampoDescGond").html('<h5>Couve un</h5>');
 	
 	$("#CampoDescRes").html('');
 	
@@ -207,12 +207,12 @@ $(document).on("click", "#cadastrarProduto", function(){
 });
 
 $(document).on("click", "#salvarNovoProd", function(){
-	var dadosNovoProduto = $("#dados_Produto").serialize();
+	//var dadosNovoProduto = $("#dados_Produto").serialize();
 
 	$.ajax({
 		url: "/produtos",
-		data: dadosNovoProduto,
-		type:"post",
+		data: "#dados_Produto",
+		type:"POST",
 		dataType:"html"
 	})//Ajax
 })

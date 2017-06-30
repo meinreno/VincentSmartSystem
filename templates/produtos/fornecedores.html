@@ -1,21 +1,29 @@
 <div class="container-fluid col-sm-12"><center><h1>Busca de Fornecedores</h1></center></div>
-<div class=" container-fluid  col-sm-12 ">
+<div class=" container-fluid">
 	
 		<div class="form-group">
 			<div class="col-sm-12">
-		  		<input type="text" name="loginEmail" class="form-control" id="loginEmail" placeholder="Insira o nome do Produto ou Codigo de Barras" required>
+		  		<input type="text" name="stringBuscaFornecedor" class="form-control" id="stringBuscaFornecedor" placeholder="Digite o Nome Fantasia ou Razão Social ou CNPJ" required>
 			</div>
 		</div>
 		<div class="form-group">
 			<div class="col-sm-6">
-			  <button id="buscarProduto" class="btn btn-primary btn-block">Buscar</button>
+			  <button id="buscarFornecedor" class="btn btn-primary btn-block">Buscar</button>
 			</div>
 			<div class="col-sm-6">
-			  <button id="cadastrarProduto" class="btn btn-primary btn-block">Cadastrar Fornecedores</button>
+			  <button id="CadastrarFornecedor" class="btn btn-primary btn-block">Cadastrar Fornecedores</button>
 			</div>
 		</div>
+        <br>
+
 		
 </div>
+<br>
+
+<div class="container-fluid">
+    <button  class="fornecedor btn btn-default btn-block" data-custo="45.54"><div class="col-sm-1" style="text-align:left">ID: 24</div><div class="col-sm-4" style="text-align:left">Nome Fantasia: Okamura Supermercados Ltda</div><div class="col-sm-2" style="text-align:left">Vendedor: Diego Lindolfo</div><div class="col-sm-2" style="text-align:left">Telefone Vendedor: (11)94712-6466</div></button>
+    <button class="btn btn-default btn-block">Produtos</button>
+ </div>
 
 <!--Modal de Exibir, Editar e Cadastrar Produtos-->
  <div class="modal fade bs-example-modal-sm" id="modal_Fornecedores" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -30,8 +38,7 @@
             <div class="container-fluid">
                 <div class="form-group">
                     <label for="campoNomeFant" class="col-sm-2 control-label">Nome Fantasia</label>
-                    <div class="col-sm-8 divDadosFornecedores" id="campoNomeFant">
-                     </div>
+                    <span class="col-sm-8 divDadosFornecedores" id="campoNomeFant"></span>
                 </div>
 
                 <div class="form-group">
@@ -42,87 +49,74 @@
 
                 <div class="form-group">
                     <label for="CampoCNPJ" class="col-sm-2 control-label">CNPJ</label>
-                    <div class="col-sm-8 divDadosFornecedores" id="CampoCNPJ">
-                    </div>
+                    <div class="col-sm-3 divDadosFornecedores" id="CampoCNPJ"></div>
+
+                    <label for="CamṕoIE" class="col-sm-2 control-label">IE(Inscrição Estadual)</label>
+                    <div class="col-sm-3 divDadosFornecedores" id="CamṕoIE"></div>
                 </div>
 
                 <div class="form-group">
-                    <label for="CamṕoIE" class="col-sm-2 control-label">IE</label>
-                    <div class="col-sm-1 divDadosFornecedores" id="CamṕoIE">
-                    </div>
+                    
 
                     <label for="CampoLogradouro" class="col-sm-2 control-label">Logradouro</label>
-                    <div class="col-sm-1 divDadosFornecedores" id="CampoLogradouro">
+                    <div class="col-sm-3 divDadosFornecedores" id="CampoLogradouro">
                     </div>
 
-                    <label for="CampoBairro" class="col-sm-1 control-label">Bairro</label>
-                    <div class="col-sm-1 divDadosFornecedores" id="CampoBairro">
+                    <label for="CampoBairro" class="col-sm-2 control-label">Bairro</label>
+                    <div class="col-sm-3 divDadosFornecedores" id="CampoBairro">
                     </div>
-
-                    <label for="CampoNumero" class="col-sm-1 control-label"Numero</label>
-                    <div class="col-sm-1 divDadosFornecedores" id="CampoNumero">
                         
-                    </div>
                 </div>
 
 
                 <div class="form-group">
+                    <label for="CampoNumero" class="col-sm-2 control-label">Numero</label>
+                    <div class="col-sm-3 divDadosFornecedores" id="CampoNumero"></div>
+
                     <label for="CampoCEP" class="col-sm-2 control-label">CEP</label>
-                    <div class="col-sm-4 divDadosFornecedores" id="CampoCEP">
+                    <div class="col-sm-3 divDadosFornecedores" id="CampoCEP">
                     </div>
                 </div>
                 
                 <div class="form-group">
                     <label for="CampoEstado" class="col-sm-2 control-label">Estado</label>
-                    <div class="col-sm-4 divDadosFornecedores" id="CampoEstado">
-                        
-                    </div>
+                    <div class="col-sm-3 divDadosFornecedores" id="CampoEstado"></div>
+
+                    <label for="CampoMunicipio" class="col-sm-2 control-label">Municipio</label>
+                    <div class="col-sm-3 divDadosFornecedores" id="CampoMunicipio"></div>
                 </div>
 
-                <div class="form-group">
-                    <label for="CampoMunicipio" class="col-sm-2 control-label">Municipio</label>
-                    <div class="col-sm-4 divDadosFornecedores" id="CampoMunicipio">
-                    </div>
-                </div>
 
                 <div class="form-group">
                     <label for="CampoVendedor" class="col-sm-2 control-label">Vendedor</label>
-                    <div class="col-sm-4 divDadosFornecedores" id="CampoVendedor">
-                    </div>
-                </div>
-                 
-                <div class="form-group">
-                    <label for="CampoMailEmpres" class="col-sm-2 control-label">Email Empresa</label>
-                    <div class="col-sm-2 divDadosFornecedores" id="CampoMailEmpres">
-                    </div>
+                    <div class="col-sm-2 divDadosFornecedores" id="CampoVendedor"></div>
 
-                    <label for="CampoMailVend" class="col-sm-1 control-label">Email Vendedor</label>
+                    <label for="CampoTelVend" class="col-sm-2 control-label">Telefone Vendedor</label>
+                    <div class="col-sm-2 divDadosFornecedores" id="CampoTelVend"></div>
+
+
+                    <label for="CampoMailVend" class="col-sm-2 control-label">Email Vendedor</label>
                     <div class="col-sm-2 divDadosFornecedores" id="CampoMailVend">
                     </div>
 
-                    <label for="CampoEndWeb" class="col-sm-1 control-label">Endereço Web</label>
-                    <div class="col-sm-2 divDadosFornecedores" id="CampoEndWeb">
-                    </div>
                 </div>
-
+                 
                 <div class="form-group">
+
+                    <label for="CampoEndWeb" class="col-sm-2 control-label">Endereço Web</label>
+                    <div class="col-sm-2 divDadosFornecedores" id="CampoEndWeb"></div>
+
                     <label for="CampoTelEmpr" class="col-sm-2 control-label">Telefone Empresa</label>
-                    <div class="col-sm-2 divDadosFornecedores" id="CampoTelEmpr">
-                    </div>
-                </div>
+                    <div class="col-sm-2 divDadosFornecedores" id="CampoTelEmpr"></div>
 
-                <div class="form-group">
-                    <label for="CampoTelVend" class="col-sm-2 control-label">Telefone Vendedor</label>
-                    <div class="col-sm-2 divDadosFornecedores" id="CampoTelVend">
-                    </div>
-                </div>
+                    <label for="CampoMailEmpres" class="col-sm-2 control-label">Email Empresa</label>
+                    <div class="col-sm-2 divDadosFornecedores" id="CampoMailEmpres"></div>
 
-                
-               
+                    
             </div>
          </form>
       </div>
-      <div  id="botoesProdutos" class="modal-footer btnDadosProdutos">
+      <div  id="botoes_Fornecedores" class="modal-footer btnDadosFornecedores">
      </div>
     </div>
   </div>
